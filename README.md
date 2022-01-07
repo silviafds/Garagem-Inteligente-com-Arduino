@@ -41,6 +41,11 @@ Além disso, ela também mede a temperatura ambiente.
 - 1 Adaptador Esp-01 para módulo Wi-Fi;
 - 1 módulo para fazer a gravação na Esp-01s.
 
+## Observação
+
+O diretório CodigoOFF possui um arquivo .ino, no qual está no modo offline ,ou seja, conectado ao arduino ele funciona normalmente, porém ainda não possui configuração para executar na internet.
+
+
 
 
 
