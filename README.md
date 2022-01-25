@@ -10,19 +10,9 @@ Além disso, ela também mede a temperatura ambiente.
 
 
 
-
-## Software & Sistema Operacional
-
-- Software: Adafruit.
-- SO: Ubuntu Server.
-
-
-
-
 ## Arquitetura:
-
-- Protocolo de comunicação: MQTT;	
-- Dispositivos: Arduino UNO e Esp-01s.
+	
+- Dispositivo: Arduino UNO.
 
 ## Dispositivos Utilizados:
 
@@ -36,14 +26,11 @@ Além disso, ela também mede a temperatura ambiente.
 - 1 Sensor ultrassônico (detecta a existência de algum veículo na garagem);
 - Cabos jumper de 20 cm macho X fêmea;
 - Cabos jumper de 20 cm macho X macho;
-- Cabos jumper de 20 cm fêmea x fêmea;
-- 1 módulo Wi-Fi Esp-01s;
-- 1 Adaptador Esp-01 para módulo Wi-Fi;
-- 1 módulo para fazer a gravação na Esp-01s.
+
 
 ## Observação
 
-O diretório CodigoOFF possui um arquivo .ino, no qual está no modo offline ,ou seja, conectado ao arduino ele funciona normalmente, porém ainda não possui configuração para executar na internet.
+O diretório CodigoOFF possui um arquivo .ino, no qual esta o arquivo com o código.
 
 
 
