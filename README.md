@@ -5,9 +5,9 @@
 
 Trazer segurança para os habitantes de uma residência que possui garagem. 
 
-Uma garagem que além de detectar a disponibilidade de vaga, ela abre o portão automaticamente assim que detectar a presença de Gás CO, GLD e fumaça.
+Uma garagem que além de detectar a disponibilidade de vaga, ela detecta a presença de Gás CO, GLD e fumaça.
 Além disso, ela também mede a temperatura ambiente.
-
+Este projeto é um protótipo de uma garagem inteligente.
 
 
 ## Arquitetura:
