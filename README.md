@@ -32,6 +32,8 @@ Este projeto é um protótipo de uma garagem inteligente.
 
 O diretório CodigoOFF possui um arquivo .ino, no qual esta o arquivo com o código.
 
+Nesta Branch possui uma parte do código que estaria na internet.
+
 
 
 
