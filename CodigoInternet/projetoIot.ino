@@ -1,10 +1,10 @@
 /************************ Configurações do Adafruit IO *******************************/
-#define IO_USERNAME "Silvia1"
-#define IO_KEY "aio_SpbJ25f7oJpOByIEliVBgvhgkFx7"
+#define IO_USERNAME ""
+#define IO_KEY ""
  
 /********************* Configuração do WIFI **************************************/
-#define WIFI_SSID "Galaxy"
-#define WIFI_PASS "Galaxy123"
+#define WIFI_SSID ""
+#define WIFI_PASS ""
  
 /***************Adicionando Bibliotecas************/
 #include "AdafruitIO_WiFi.h"
