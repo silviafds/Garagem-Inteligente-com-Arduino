@@ -2,8 +2,10 @@
 #include <Ultrasonic.h>
 #include <Servo.h>
 #include <thermistor.h>
+
 /********************** CRIANDO OBJETOS *************************/
 Servo myservo;
+
 /********************* DECLARANDO VARIAVEIS **********************/
 int pinBuzzer = 13;
 int PinA3 = A3; //DECLARACAO CODIGO MQ2
@@ -14,6 +16,7 @@ int NivelMQ7 = 210; //DEFINE VALOR LIMITE (NÍVEL GÁS)
 /*** SENSOR ULTRASONICO ***/
 Ultrasonic sensor(8, 7); //Configura os pinos do sensor ultrassonico | TRIGGER = 8 e Echo = 7
 long distancia;
+
 /*** SENSOR DE TEMPERATURA ***/
 #define NTC_PIN 5
 THERMISTOR thermistor(NTC_PIN,        // Analog pin
@@ -31,7 +34,6 @@ void setup() {
 }
 
 void loop() {
-  
   detectaGasFumaca();
   detectaCO();
   detectaVaga();
@@ -48,11 +50,12 @@ void detectaGasFumaca() {
     /*Serial.print("COM gas, valor lido: ");
     Serial.println(LendoMQ2);*/
   } else {
-    digitalWrite(pinBuzzer, LOW);  
-    myservo.write(0); //comando servo abrir em 0 graus
-    /*Serial.print("sem gas, valor lido: ");
-    Serial.println(LendoMQ2);*/
+      digitalWrite(pinBuzzer, LOW);  
+      myservo.write(0); //comando servo abrir em 0 graus
+      /*Serial.print("sem gas, valor lido: ");
+      Serial.println(LendoMQ2);*/
   }
+
 }
 
 void detectaCO() {
@@ -64,11 +67,12 @@ void detectaCO() {
     /*Serial.print("COM gas, valor lido: ");
     Serial.println(LendoMQ7);*/
   } else {
-    digitalWrite(pinBuzzer, LOW);  
-    myservo.write(0); //comando servo abrir em 0 graus
-    /*Serial.print("sem gas, valor lido: ");
-    Serial.println(LendoMQ7);*/
+      digitalWrite(pinBuzzer, LOW);  
+      myservo.write(0); //comando servo abrir em 0 graus
+      /*Serial.print("sem gas, valor lido: ");
+      Serial.println(LendoMQ7);*/
   }
+
 }
 
 void detectaVaga() {
@@ -79,14 +83,14 @@ void detectaVaga() {
   if(distancia <= 5){
     /*Serial.println("Não Tem vaga");  */
   } else if(distancia >= 6){
-    /*Serial.println("Tem vaga");  */
+      /*Serial.println("Tem vaga");  */
   }
+
 }
 
 void detectaTemperatura() {
   temp = thermistor.read();
   Serial.print("LEITURA THERMISTOR.READ: ");
   Serial.print(temp);
-  
-  
+
 }
