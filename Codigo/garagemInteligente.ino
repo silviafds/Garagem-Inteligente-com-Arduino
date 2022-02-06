@@ -14,7 +14,7 @@
 /*************************** Criando objetos ***************************************/
 Servo myservo;
 
-/*********************** Configurações do comunicaçaão *****************************/
+/*********************** Configurações do comunicação ******************************/
 AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
 
 /***************************** Adicionando feeds ***********************************/
@@ -99,17 +99,20 @@ bool detectaGasFumaca(String gatilho) {
   Serial.print(" leitura: " );
   Serial.print(lendoMQ2);
   
-  if(gatilho == "true") {
+  if(gatilho == "true") { //portão aberto pelo adafruit
     
     if (lendoMQ2 < NivelMQ2) {
       Serial.println(" SEM GAS");
       return 0;
+    } else {
+        Serial.println(" Gas detectado");
+        return 1;
     }
     
-  } else if (gatilho == "false") {
+  } else if (gatilho == "false") { //portão fechado aberto pelo adafruit
       if(lendoMQ2 > NivelMQ2) { 
         Serial.println(" Gas detectado");
-        myservo.write(120);
+        myservo.write(130);
         return 1;
       } else {
           Serial.println(" SEM GAS");
@@ -129,7 +132,7 @@ void conectaBroker(){
   // chama função de conexão io.adafruit.com
   io.connect();
  
-   // instancia um novo handler para recepção da mensagem do feed Rele
+   // instancia um novo handler para recepção da mensagem do feed abreortao
   abreportao->onMessage(AbrindoPortao);
  
   // Aguarda conexação ser estabelecida
