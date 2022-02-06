@@ -109,7 +109,7 @@ bool detectaGasFumaca(String gatilho) {
         return 1;
     }
     
-  } else if (gatilho == "false") { //portão fechado aberto pelo adafruit
+  } else if (gatilho == "false") { //portão fechado pelo adafruit
       if(lendoMQ2 > NivelMQ2) { 
         Serial.println(" Gas detectado");
         myservo.write(130);
