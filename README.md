@@ -28,4 +28,6 @@ Este projeto é um protótipo de uma garagem inteligente.
 - Cabos jumper de 20 cm macho X fêmea;
 - Cabos jumper de 20 cm macho X macho;
 
-    
+## Observação:
+
+Os diretórios são independentes, a diferença entre eles são algumas bibliotecas de conexão com Adafruit que diferem. O funcionamento é o mesmo. 
